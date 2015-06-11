@@ -1,14 +1,14 @@
-package = 'luadb'
+package = 'luadbg'
 version = '0.1-1'
 source = {
-    url = 'https://github.com/pratikac/luadb',
+    url = 'https://github.com/pratikac/luadbg',
 }
 description = {
     summary = 'Lua Debugger',
     detailed = [[
       Fork of clidebugger (https://github.com/ToddWegner/clidebugger).
     ]],
-    homepage = 'https://github.com/pratikac/luadb',
+    homepage = 'https://github.com/pratikac/luadbg',
     license = 'LGP-v3',
 }
 supported_platforms = {
@@ -19,12 +19,12 @@ dependencies = {
     'lua ~> 5.1',
 }
 source = {
-    url = 'https://github.com/pratikac/luadb',
-    dir = 'luadb',
+    url = 'https://github.com/pratikac/luadbg',
+    dir = 'luadbg',
 }
 build = {
     type = 'builtin',
     modules = {
-	    ['luadb.init'] = 'init.lua',
+	    ['luadbg.init'] = 'init.lua',
     },
 }
