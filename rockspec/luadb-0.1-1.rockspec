@@ -24,6 +24,6 @@ source = {
 build = {
     type = 'builtin',
     modules = {
-	    ['init'] = 'init.lua',
+	    ['luadb.init'] = 'luadb/init.lua',
     },
 }
