@@ -2,7 +2,8 @@ package = "luadbg"
 version = "0.1-1"
 
 source = {
-    url = "https://github.com/pratikac/luadbg",
+    url = "git://github.com/pratikac/luadbg",
+    tag = "v0.1-1",
 }
 
 description = {
@@ -18,13 +19,9 @@ dependencies = {
     "lua >= 5.1",
 }
 
-source = {
-    url = "https://github.com/pratikac/luadbg",
-}
-
 build = {
     type = "builtin",
     modules = {
-        ["luadbg.init"] = "init.lua",
+        ['luadbg.init'] = 'init.lua',
     },
 }
