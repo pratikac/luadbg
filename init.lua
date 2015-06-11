@@ -1,45 +1,5 @@
 
---{{{  history
-
---15/03/06 DCN Created based on RemDebug
---28/04/06 DCN Update for Lua 5.1
---01/06/06 DCN Fix command argument parsing
---             Add step/over N facility
---             Add trace lines facility
---05/06/06 DCN Add trace call/return facility
---06/06/06 DCN Make it behave when stepping through the creation of a coroutine
---06/06/06 DCN Integrate the simple debugger into the main one
---07/06/06 DCN Provide facility to step into coroutines
---13/06/06 DCN Fix bug that caused the function environment to get corrupted with the global one
---14/06/06 DCN Allow 'sloppy' file names when setting breakpoints
---04/08/06 DCN Allow for no space after command name
---11/08/06 DCN Use io.write not print
---30/08/06 DCN Allow access to array elements in 'dump'
---10/10/06 DCN Default to breakfile for all commands that require a filename and give '-'
---06/12/06 DCN Allow for punctuation characters in DUMP variable names
---03/01/07 DCN Add pause on/off facility
---19/06/07 DCN Allow for duff commands being typed in the debugger (thanks to Michael.Bringmann@lsi.com)
---             Allow for case sensitive file systems               (thanks to Michael.Bringmann@lsi.com)
---04/08/09 DCN Add optional line count param to pause
---05/08/09 DCN Reset the debug hook in Pause() even if we think we're started
---30/09/09 DCN Re-jig to not use co-routines (makes debugging co-routines awkward)
---01/10/09 DCN Add ability to break on reaching any line in a file
---24/07/13 TWW Added code for emulating setfenv/getfenv in Lua 5.2 as per
---             http://lua-users.org/lists/lua-l/2010-06/msg00313.html
---25/07/13 TWW Copied Alex Parrill's fix for errors when tracing back across a C frame
---             (https://github.com/ColonelThirtyTwo/clidebugger, 26/01/12)
---25/07/13 DCN Allow for windows and unix file name conventions in has_breakpoint
---26/07/13 DCN Allow for \ being interpreted as an escape inside a [] pattern in 5.2
-
---}}}
---{{{  description
-
---A simple command line debug system for Lua written by Dave Nichols of
---Match-IT Limited. Its public domain software. Do with it as you wish.
-
---This debugger was inspired by:
--- RemDebug 1.0 Beta
--- Copyright Kepler Project 2005 (http://www.keplerproject.org/remdebug)
+--{{{
 
 --Usage:
 --  require('debugger')        --load the debug library
@@ -1452,3 +1412,7 @@ end
 _TRACEBACK = debug.traceback             --Lua 5.0 function
 
 --}}}
+
+return {
+    pause = pause
+}

@@ -8,8 +8,8 @@ source = {
 description = {
     summary = "Lua Debugger",
     detailed = [[
-      Fork of clidebugger (https://github.com/ToddWegner/clidebugger).
-    ]],
+        Fork of clidebugger (https://github.com/ToddWegner/clidebugger).
+        ]],
     homepage = "https://github.com/pratikac/luadbg",
     license = "LGP-v3",
 }
@@ -19,12 +19,12 @@ dependencies = {
 }
 
 source = {
-    url = "https://github.com/pratikac/luadbg"
+    url = "https://github.com/pratikac/luadbg",
 }
 
 build = {
     type = "builtin",
     modules = {
-	    ["luadbg"] = "init.lua",
+        ["luadbg.init"] = "init.lua",
     },
 }
