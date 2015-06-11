@@ -16,6 +16,7 @@ supported_platforms = {
     'macosx',
 }
 dependencies = {
+    'lua ~> 5.1',
 }
 source = {
     url = 'https://github.com/pratikac/luadb',
