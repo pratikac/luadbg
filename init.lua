@@ -167,7 +167,7 @@ If N is omitted, use 1.
 ]],
 
 over    = [[
-over | next | n [N]     -- run next N lines, stepping over function calls|
+over | next [N]     -- run next N lines, stepping over function calls|
 
 If N is omitted, use 1.
 ]],
@@ -978,7 +978,7 @@ local function debugger_loop(ev, vars, file, line, idx_watch)
       return 'cont'
       --}}}
 
-    elseif (command == "over" or command == "next" or command == "n") then
+    elseif (command == "over" or command == "next") then
       --{{{  step N lines (over functions)
       local N = tonumber(args) or 1
       step_into  = false
