@@ -836,7 +836,7 @@ local function debugger_loop(ev, vars, file, line, idx_watch)
   
   local function getargs(spec)
     local res={}
-    local char,arg
+    local char,arg,_
     local ptr=1
     for i=1,string.len(spec) do
       char = string.sub(spec,i,i)
